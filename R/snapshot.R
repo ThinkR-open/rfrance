@@ -71,9 +71,17 @@ snapshot <- function(
 
   # take webshot
   png <- file.path( normalizePath(site), "static", "images", glue("{filename}.png") )
-  webshot(url, file = png)
+  if( !file.exists(png) ){
+    message( glue("snapshot dans {png}") )
+    webshot(url, file = png )
+  }
 
-  txt <- glue(readLines( system.file("template", "article.md", package = "rfrance") ))
-  md  <- file.path( normalizePath(site), "static", "images", glue("{filename}.png") )
+  template <- paste(readLines( system.file("template", "article.md", package = "rfrance") ), collapse = "\n" )
+  txt <- glue(template)
+  md  <- file.path( normalizePath(site), "content", "post", glue("{filename}.md") )
+  if( file.exists(md)) unlink(md)
+  message( glue("generation de l'article dans {md}") )
+  writeLines(txt, md)
 
+  invisible(NULL)
 }
