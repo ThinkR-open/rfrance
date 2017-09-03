@@ -6,7 +6,9 @@
       <time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "02 Jan 2006" }}</time>
   </header>
 
-  <img src="/images/{{ .Date.Format "2006-01-02" }}-{{ .Slug }}.png" />
+  <a href="{{ .Params.link }}">
+    <img src="/images/{{ .Date.Format "2006-01-02" }}-{{ .Slug }}.png" />
+  </a>
 
 </article>
 

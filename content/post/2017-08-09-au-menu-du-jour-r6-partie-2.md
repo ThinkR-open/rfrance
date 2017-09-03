@@ -4,5 +4,5 @@ description: "Vous avez lu avec attention notre premier billet sur R6, et vous e
 date: "2017-08-09"
 slug: "au-menu-du-jour-r6-partie-2"
 tags: []
+link: "https://thinkr.fr/au-menu-du-jour-r6-partie-2/"
 ---
-

@@ -4,4 +4,5 @@ description: "Retour sur l’intervention de Vincent aux 6e Rencontres R d’Ang
 date: "2017-07-20"
 slug: "dockeriser-une-application-shiny"
 tags: []
+link: "https://thinkr.fr/dockeriser-application-shiny/"
 ---
