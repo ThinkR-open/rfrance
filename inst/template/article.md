@@ -1,7 +1,7 @@
 ---
-title: {title}
-date: {date}
-slug: {slug}
+title: "{title}"
+description: "{description}"
+date: "{date}"
+slug: "{slug}"
 tags: {keywords}
-snapshot: {snapshot}
 ---
