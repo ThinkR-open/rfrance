@@ -1,0 +1,21 @@
+Package: rfrance
+Title: Aggregation d'articles de blogs en français
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Romain", "François", email = "romain@thinkr.fr", role = c("aut", "cre")), 
+    person("ThinkR", role = "cph")
+  )
+Description: Aggregation d'articles de blogs en français.
+Depends: R (>= 3.4.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: webshot,
+    rvest,
+    xml2,
+    glue,
+    magrittr,
+    lubridate,
+    rlang,
+    stringr
+RoxygenNote: 6.0.1.9000
