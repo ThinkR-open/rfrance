@@ -12,30 +12,49 @@ snapshot( "https://thinkr.fr/de-retour-de-user2017/" )
 
 ## Comment soumettre un article
 
-Dans un premier temps, il faut cloner le repo. On utilise un sous module pour 
-le theme, alors il faut faire un clone recursif. 
+Il y a deux choses dans `rfrance`: 
+ - un site construit avec hugo et blogdown
+ - un package (avec la fonction snapshot)
 
+Pour soumettre un article, vous pouvez ouvrir une issue en donnant son lien. 
+
+Ou préparer un pull request, c'est un peu plus de travail pour vous, mais un peu moins pour nous. Du coup c'est plus rapide. 
+Pour préparer le pr, il vous faut: 
+
+ - forker le repo sous votre nom d'utilisateur github (par exemple "moi")
+ - cloner votre fork
+ 
 ```
-$ git clone --recursive https://github.com/ThinkR-open/rfrance
+$ git clone https://github.com/{moi}/rfrance
 $ cd rfrance
 ```
 
-Ensuite, il faut installer le code en tant que package R, par exemple:
+A ce moment là, vous pouvez installer le package R via `devtools::install('.')` mais le plus simple est: 
 
 ```R
-devtools::install(".")
+install_github("ThinkR-open/rfrance")
+library(rfrance)
 ```
 
-Et enfin, on utilise la fonction `snapshot` à qui on donne au moins l'url
+Ensuite, on utilise la fonction `rfrance::snapshot` pour generer un fichier `.md` et un 
+fichier `.png`. Par exemple: 
 
 ```
 snapshot( "https://thinkr.fr/de-retour-de-user2017/" )
 ```
 
-`snapshot` crée:
+ce qui crée:
  - un fichier `.md` dans `content/post`
  - un fichier `.png` dans `static/images`
  
-Et après, on reconstruit le site avec `blogdown::serve_site()`
+Ensuite, vous pouvez voir ce que ça donne avec `blogdown::serve_site()`
 
-Plus qu'à soumettre les deux fichiers ajoutés en tant que pull request. 
+Puis commiter et pusher les modifications (en principe juste sur ces 2 fichiers)
+
+```
+$ git commit -a -m "+ un article sur la pluie et le beau temps"
+$ git push
+```
+
+Dernière etape, soumettre la pull request sur github. 
+
