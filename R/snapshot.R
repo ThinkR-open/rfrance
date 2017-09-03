@@ -32,6 +32,15 @@ meta_twitter_handle <- meta_twitter("site")
 #' - webshot
 #' - creation
 #'
+#' @param url Le lien du post
+#' @param site chemin vers le site hugo. La valeur par defaut suffit
+#' @param title titre du post. Si on ne la donne pas, on essaye de recuperer l'info en parsant le html de la page
+#' @param description description du post (idem)
+#' @param site_name nom du site (idem)
+#' @param published date de publication. si non fournie, on la guess depuis le html, si ça marche pas on dit que c'est ajd
+#' @param twitter le handle twitter
+#' @param keywords les mots clés du post
+#'
 #' @importFrom xml2 read_html
 #' @importFrom webshot webshot
 #' @importFrom rlang %||%
