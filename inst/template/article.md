@@ -5,4 +5,5 @@ date: "{date}"
 slug: "{slug}"
 tags: {keywords}
 link: "{url}"
+site_name: "{site_name}"
 ---

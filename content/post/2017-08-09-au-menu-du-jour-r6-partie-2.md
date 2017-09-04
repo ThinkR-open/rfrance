@@ -5,4 +5,5 @@ date: "2017-08-09"
 slug: "au-menu-du-jour-r6-partie-2"
 tags: []
 link: "https://thinkr.fr/au-menu-du-jour-r6-partie-2/"
+site_name: "ThinkR"
 ---

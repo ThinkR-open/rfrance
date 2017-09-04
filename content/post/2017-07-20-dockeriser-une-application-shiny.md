@@ -5,4 +5,5 @@ date: "2017-07-20"
 slug: "dockeriser-une-application-shiny"
 tags: []
 link: "https://thinkr.fr/dockeriser-application-shiny/"
+site_name: "ThinkR"
 ---
